@@ -59,6 +59,7 @@ public class CompanyCreditServiceImpl implements CompanyCreditService {
 		return companyCreditRepository.findById(companyCredit.getId()).flatMap(c -> {
 			c.setModifyUser(companyCredit.getModifyUser());
 			c.setModifyDate(new Date());
+			log.info("Añadiendo campos de auditoría]");
 			return companyCreditRepository.save(c);
 		}).switchIfEmpty(Mono.error(new CustomNotFoundException("CompanyCredit not found")));
 	}
