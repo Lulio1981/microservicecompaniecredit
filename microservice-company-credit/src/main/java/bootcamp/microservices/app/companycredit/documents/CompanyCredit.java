@@ -15,7 +15,7 @@ public class CompanyCredit {
 
 	private String creditNumber;
 
-	private Company company;
+	private String idCompany;
 
 	private Double creditAmount;
 

@@ -18,4 +18,6 @@ public interface CompanyCreditService {
 
 	public Mono<CompanyCredit> deleteLogic(CompanyCredit companyCredit);
 
+	public Mono<CompanyCredit> findByIdClient(String idCompany);
+
 }

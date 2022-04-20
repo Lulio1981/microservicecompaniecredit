@@ -63,4 +63,8 @@ public class CompanyCreditServiceImpl implements CompanyCreditService {
 		}).switchIfEmpty(Mono.error(new CustomNotFoundException("CompanyCredit not found")));
 	}
 
+	@Override
+	public Mono<CompanyCredit> findByIdClient(String idCompany) {
+		return companyCreditRepository.findByIdCompany(idCompany);
+	}
 }
